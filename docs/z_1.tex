@@ -98,6 +98,19 @@
 % Allow footnotes in longtable head/foot
 \IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
 \makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -111,6 +124,8 @@
 %\usepackage{showframe}
 %\usepackage[a4paper]{geometry}
 %\geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=3.5cm,rmargin=3cm}
+\setlength\parindent{23pt}
+\usepackage[singlelinecheck=off]{caption}
 
 \usepackage{times}
 \renewcommand{\rmdefault}{ptm}
@@ -130,10 +145,10 @@
 \makeatother
 
 % Resize figures that are too wide for the page.
-\let\oldincludegraphics\includegraphics
-\renewcommand\includegraphics[2][]{%
-  \oldincludegraphics[scale=0.85]{#2}
-}
+%\let\oldincludegraphics\includegraphics
+%\renewcommand\includegraphics[2][]{%
+%  \oldincludegraphics[scale=0.85]{#2}
+%}
 
 \usepackage{amsthm}
 \makeatletter
@@ -142,8 +157,6 @@
   \thm@postskip=\thm@preskip
 }
 \makeatother
-
-
 
 \flushbottom 
 
@@ -157,7 +170,7 @@
 
 \title{Morfología visual}
 \author{Ricardo Michel MALLQUI BAÑOS}
-\date{2021-05-26}
+\date{2021-08-31}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Teorema}[chapter]
@@ -183,10 +196,17 @@
 %\cleardoublepage\newpage\thispagestyle{empty}\null
 %\cleardoublepage\newpage
 \thispagestyle{empty}
-\begin{center}
-\includegraphics{U.pdf}
-\end{center}
+\begin{flushright}
+Universidad Nacional San Cristobal de Huamanga
 
+Fisart.cf
+
+Agradecimento a los estudiantes de la ESFAPA FGPA
+
+A la UNSCH
+
+\includegraphics[height=3cm]{U.pdf}
+\end{flushright}
 %\setlength{\abovedisplayskip}{-5pt}
 %\setlength{\abovedisplayshortskip}{-5pt}
 
@@ -221,98 +241,260 @@
 \chapter*{Resumen}\label{resumen}}
 
 
-La importancia del estudio de la forma en el arte plástico es explicita debido a la manipulación de estas en el espacio bidimensional y tridimensional, en el plano bidimensional se estudian aspectos geometricos partiendo desde la forma de un punto hasta formas orgánicas con comportamientos similares al de los conjuntos fractales de Mandelbrot y Julia y en el espacio tridimensional se realizara un estudio sobre formas que viven en este espacio es decir tanto las formas bidimensionales además de los sólidos geométricos y formas organicas como las superficies organicas como los conjuntos de Mandelbrots 3D y julia 3D. Finalmente se realiza composiciones con estas formas, utilizando principios compositivos con el objetivo de reunir los conocimientos previos y reconocer la utilidad de su estudio previo. Luego se reconocerán estas formas como contenedores de formas existentes en la naturaleza tales como la fitomorfología, la zoomorfología, la geomorfologia
+La importancia del estudio de la forma en el arte plástico se debe a la manipulación constante de estas en el espacio bidimensional y tridimensional. En el plano bidimensional se estudian aspectos geometricos partiendo desde la forma de un punto hasta formas orgánicas con comportamientos similares al de los conjuntos fractales de Mandelbrot y Julia y en el espacio tridimensional se realiza un estudio sobre formas que viven en este espacio es decir tanto las formas bidimensionales además de los sólidos geométricos y las formas orgánicas y los conjuntos fractales de Mandelbrots 3D y julia 3D. Finalmente se realiza composiciones con estas formas, utilizando principios de composicon plástica con el objetivo de reunir los conocimientos previos y reconocer la utilidad de su estudio previo. Luego se reconocerán estas formas como contenedores de formas existentes en la naturaleza tales como las formas estudiadas en la fitomorfología, la zoomorfología, la geomorfologia. En el Apendice se describen conceptos relacionados a transformaciones y centros de masa de formas 2d y 3d.
 
 \hypertarget{introducciuxf3n}{%
 \chapter*{Introducción}\label{introducciuxf3n}}
 
 
-El estudio de la forma de manera aislada o compositiva, en el arte plástico es de importancia para la manipulación correcta de estas, generando y representación lógica; es decir desprovista de la intuición, la intuición, generalmente distorsiona el aspecto verdadero de las formas.
+El estudio de la forma de manera aislada o compositiva, en el arte plástico es de importancia para la manipulación correcta de estas, generando representación lógica; es decir desprovista de la intuición, la intuición, generalmente distorsiona el aspecto verdadero de las formas.
 
-El espacio bidimensional se denota con el símbolo \(\mathbb{R}^2\) y al espacio tridimensional se denota con el símbolo \(\mathbb{R}^3\). Las formas bidimensionales pueden existir tanto el el espacio bidimensional y tridimensional y Las formas tridimensionales unicamente pueden existir el el espacio tridimensional.
+El espacio bidimensional se denota con el símbolo \(\mathbb{R}^2\) y al espacio tridimensional se denota con el símbolo \(\mathbb{R}^3\). Las formas bidimensionales pueden existir tanto el el espacio bidimensional y tridimensional y Las formas tridimensionales únicamente pueden se representados en el espacio tridimensional.
 
-Las formas que reunen todas las caracteristicas de las formas bidimnesionales y tridmensionales son los las formas llamadas fractales. que se generana bajo los procesos de iteración o recursividad de ciertas formas básicas llamadas módulos, exiten modelos secuenciales que indican la recursividad, la formas concernientes a los fractales generadas por los números complejos son las llamadas ocacionalmente conjuntos de Mandelbrot y Julia en el espacio bidimensional y el el espacio tridmencional suelen llamarse conjuntos de Mandelbrot 3D y Julia 3D, estas formas manifiestan una variedad infinita
+Las formas que reunen todas las caracteristicas de las formas bidimnesionales y tridmensionales son los las formas llamadas fractales tridimensionales que se generan bajo procesos de iteración o recursividad de transformaciones de las copias de ciertas formas básicas llamadas módulos, exiten modelos secuenciales que indican la recursividad, la formas concernientes a los fractales generadas por los números complejos son las llamadas conjuntos de Mandelbrot y Julia en el espacio bidimensional y el el espacio tridmencional se llaman conjuntos de Mandelbrot 3D y Julia 3D, estas formas manifiestan una variedad infinita.
 
-El libro se realiza bajo las teorias y conceptos de diversas áreas tales como la botánica la geometría descriptiva, modelos matemáticos, que proveen de conceptos y objetos utilizados hasta el momento de manera intuitiva en las artes plásticas es decir se interrrelaciona estos conocimientos con el objetivos de agruparlos y demostrar que este agrupamiento de manera lógica y secuencial, esta avalada evidentemente por las teorías y la intuición genuina.
+El libro se realiza bajo las teorias y conceptos de diversas áreas tales como la botánica la geometría descriptiva, modelos matemáticos, que proveen de conceptos y objetos utilizados hasta el momento de manera intuitiva en las artes plásticas es decir se interrelaciona estos conocimientos con el objetivo de agruparlos de manera lógica y secuencial, avalada evidentemente por las teorías y la intuición genuina.
 
-Las formas orgánicas son aquellas escapan a una geometría especifica ya estudiadas pero pueden ser estudiadas ajo criterios de geometrización es decir generando una red geométrica, esto es identificando los puntos sobre la forma que sirvan de anclaje o vertice, estos puntos pueden pertenecer o no la forma en el primer caso se debe considerar que sean puntos más resaltantes de la forma, en el sugundo caso deben ser punto de manera que generan segmentos tangentes a las formas.
+Las formas orgánicas son aquellas que escapan a una geometría especifica ya estudiadas pero pueden ser estudiadas bajo criterios de geometrización es decir generando una red geométrica que lo inscriban, esto es identificando los puntos sobre la forma que sirvan de anclaje o vertice, estos puntos pueden pertenecer o no la forma en el primer caso se debe considerar que sean puntos más resaltantes de la forma, en el sugundo caso deben ser punto de manera que generan segmentos tangentes a la forma considerada.
 
-El libro se compone de cinco capítulos en los cuales se describen los temas de manera secuencial además de dos apéndices que sirven como reforzamiento de la ideas vertidas en el texto es decir en el primer capitulo se describe la teoría de la forma en el espacio bidimensional, en el capitulo 2 se describe la teoría de las formas tridimensionales, en el tercer capítulo concierne a la teoría de formas compositivas, el capítulo 4 formas orgánicas y su geometría, el capítulo 5 formas abstractas y su geometria
+El libro se compone de cinco capítulos en los cuales se describen los temas de manera secuencial además de dos apéndices que sirven como reforzamiento de la ideas vertidas en el texto es decir en el primer capitulo se describe la teoría de la forma en el espacio bidimensional, en el capitulo 2 se describe la teoría de las formas tridimensionales, en el tercer capítulo concierne a la teoría de formas compositivas, el capítulo 4 formas orgánicas y su geometría, el capítulo 5 formas abstractas y su geometría.
 
 \mainmatter
 
-\hypertarget{formas-bidimesionales}{%
-\chapter{Formas bidimesionales}\label{formas-bidimesionales}}
+\hypertarget{elementos-buxe1sicos-del-diseuxf1o}{%
+\section{Elementos básicos del diseño}\label{elementos-buxe1sicos-del-diseuxf1o}}
 
-En este capítulo se describirán definiciones y conceptos sobre las formas básicas que existen el espacio bidimensional \(\mathbb{R}\) tales como el punto, la linea, los polígonos, las formas orgánicas y los fractales bidimensionales
+Comencemos detallando los 6 elementos básicos con los que un diseñador puede crear sus composiciones. ¿Cuáles son los 6 elementos que puede contener un diseño? Todos, sin excepción, disponen de alguno de ellos:
 
-\hypertarget{el-punto-y-la-linea}{%
-\section{El punto y la linea}\label{el-punto-y-la-linea}}
+\begin{itemize}
+\item
+  \textbf{Línea}. Quizás el más básico. Todo comienza con una línea. Una línea corta puede verse como un punto.
+\item
+  \textbf{Dirección}. Todas las líneas tienen una dirección y según cual sea, puede provocar diferentes percepciones. Por ejemplo: una línea vertical da sensación de altura, una horizontal de estabilidad, una en diagonal, crecimiento (si va de menos a más, de izquierda a derecha) o descenso (si va de más a menos, de izquierda a derecha). ¿Te lo habías planteado?
+\item
+  \textbf{Forma}. Línea + dirección = forma. Las formas están compuestas por líneas, bien cerradas o abiertas (y aquí es donde entra, por ejemplo la Ley de Cierre de Gestalt, donde el cerebro ``cierra'' o ``une'' esos espacios). Pueden ser líneas explícitas, o bien utilizando otros principios como el contraste, o elementos como el color, que también crean formas.
+\item
+  \textbf{Tamaño}. El tamaño también es un elemento importante de todo diseño. Un mismo elemento repetido en dos tamaños diferentes pueden provocar sensaciones diferentes: tamaño (propiamente dicho), distancia o jerarquía.
+\item
+  \textbf{Color}. Un elemento fundamental. Y por color, entendemos todos: blanco, negro, rojo, azul, etc. El color nos ayuda a contrastar elementos y no olvidemos su peso emocional, donde cada color tiene varios significados. Por ejemplo: el color blanco transmite pureza, paz, limpieza, perfección\ldots{} El color se compone de 3 valores: color (verde), saturación (cantidad de verde puro, su ausencia es una escala de grises) y brillo (luminosidad del color, más próximo al blanco o al negro).
+\item
+  \textbf{Textura}. Un derivado del color. La textura añade ese toque extra de realidad, ya que en la naturaleza no solemos encontrar objetos con colores planos 100\%, y la textura nos aporta una información extra de la superficie del objeto.
+\end{itemize}
 
-\begin{definition}[Espacio bidimesional]
-\protect\hypertarget{def:r2}{}{\label{def:r2} \iffalse (Espacio bidimesional) \fi{} }El espacio bidimensional es un conjunto de puntos es un ente grafico, considerada como la mínima unidad en la representacion o el diseño.
+\hypertarget{intro}{%
+\chapter{Principios de la composición}\label{intro}}
+
+El \textbf{diseño gráfico} es un proceso creativo que consiste en \textbf{transmitir un mensaje} a través de una \emph{comunicación visual}. Dentro de este proceso, existe lo que se conoce como \emph{principios de la composición} en diseño gráfico.
+
+Entendemos por \textbf{composición} como la \textbf{disposición} de los elementos sobre un plano o el espacio. Dichos \emph{elementos} pueden ser de distintos tipos.
+
+Se trata de una clase de \textbf{reglas} que sirven como \textbf{guía}, no como leyes, y permiten \textbf{construir y comunicar} el mensaje, para que éste se transmita de la forma más exitosa posible.
+
+Se consideran los siguientes principios:
+
+\hypertarget{uxe9nfasis-o-punto-focal}{%
+\section{Énfasis o punto focal}\label{uxe9nfasis-o-punto-focal}}
+
+\begin{definition}[Énfasis]
+\protect\hypertarget{def:enfasis}{}{\label{def:enfasis} \iffalse (Énfasis) \fi{} }Este otro principio de la composición se basa en un elemento que domina sobre el resto en condición de subordinación. Dentro de la jerarquía, encontramos 3 subtipos:
+
+\begin{itemize}
+\tightlist
+\item
+  Alineación
+\item
+  Escala
+\item
+  Color
+\item
+  Forma
+\end{itemize}
 \end{definition}
 
-\begin{definition}[El punto]
-\protect\hypertarget{def:punto}{}{\label{def:punto} \iffalse (El punto) \fi{} }El punto es un ente grafico, considerada como la mínima unidad en la representacion o el diseño.
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth,height=1\textheight]{enfasis} 
+
+}
+
+\caption{Unidad continuidad}\label{fig:enfasisw}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{enfasis.png}
+\caption{img}
+\end{figure}
+
+\hypertarget{equilibrio-o-balance}{%
+\section{Equilibrio o balance}\label{equilibrio-o-balance}}
+
+\begin{definition}[Equilibrio]
+\protect\hypertarget{def:r}{}{\label{def:r} \iffalse (Equilibrio) \fi{} }El equilibrio se basa en la organización de los elementos de modo que \textbf{nada domine en el plano o bien para que una parte pese más que la otra}.
+
+Existen dos tipos de equilibrio: la simetría y la asimetría.
 \end{definition}
 
-La ubicación de un punto se realiza con la ayuda de un sistema de ejes coordenados refiérase a la Definición \ref{def:r2} compuestas de dos ejes el eje \(x\) (eje de las abscisas) y el eje \(y\) (eje de las ordenadas), ademas de una etiqueta de ser necesaria, es decir el punto \(W=(x,y)\) indica que esta ubicada a \(x\) unidades sobre el eje \(x\), del centro del sistema de ejes coordenados, a la derecha si \(x\) es positivo y a la izquierda si \(x\) es negativo; y \(y\) unidades sobre el eje \(y\), del centro del sistema de ejes coordenados, a la arriba si \(x\) es positivo y a la abajo si \(x\) es negativo.
+\begin{itemize}
+\item
+  \textbf{Balance Simétrico}: se da cuando los elementos se disponen simétricamente a ambos lados de los ejes, horizontal o vertical.
+\item
+  \textbf{Balance Asimétrico}: se da cuando los elementos no mantienen simetría por forma, pero sí por peso visual.
+\end{itemize}
 
-\begin{definition}[La linea]
-\protect\hypertarget{def:linea}{}{\label{def:linea} \iffalse (La linea) \fi{} }La linea considerada como el conjunto de puntos distribuidas de manera secuencial es decir yuxtapuestas.
-\end{definition}
+\begin{figure}
 
-\hypertarget{poluxedgonales}{%
-\section{Polígonales}\label{poluxedgonales}}
+{\centering \includegraphics[width=1\linewidth,height=1\textheight]{equilibrio} 
 
-\hypertarget{curvas-cerradas}{%
-\section{Curvas cerradas}\label{curvas-cerradas}}
+}
 
-\hypertarget{la-circunferencia}{%
-\subsection{La circunferencia}\label{la-circunferencia}}
+\caption{Unidad continuidad}\label{fig:equilibrio}
+\end{figure}
 
-\begin{definition}[La circunferencia]
-\protect\hypertarget{def:circulo}{}{\label{def:circulo} \iffalse (La circunferencia) \fi{} }Es la curva geenrada por los puntos que equidistan de un punto llamado centro de la cirunferencia
-\end{definition}
+\hypertarget{ritmo-o-movimiento}{%
+\section{Ritmo o movimiento}\label{ritmo-o-movimiento}}
 
-\hypertarget{la-elipse}{%
-\subsection{La elipse}\label{la-elipse}}
+El principio del ritmo consiste en la \textbf{repetición de elementos} con el fin de conseguir una \textbf{composición harmoniosa}. Dicha repetición puede ser \textbf{constante o alterna}, afectadas por el color, la forma, etc.
 
-\hypertarget{trasformaciuxf3n-de-la-elipse}{%
-\subsection{Trasformación de la elipse}\label{trasformaciuxf3n-de-la-elipse}}
+Este principio pretende expresar el movimiento en la composición y existen dos clases:
 
-\hypertarget{lugares-geomuxe9tricos}{%
-\section{Lugares geométricos}\label{lugares-geomuxe9tricos}}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Regular}, cuando el movimiento es uniforme y constante
+\item
+  \textbf{Progresivo}, cuando el movimiento es alterno y varía.
+\end{itemize}
 
-\hypertarget{las-cuxf3nicas}{%
-\subsection{Las cónicas}\label{las-cuxf3nicas}}
+El ritmo es la secuencia con que aparecen los elementos que componen el diseño: el orden, la repetición y la forma de organizarlos.
 
-\hypertarget{otros}{%
-\subsection{Otros\ldots{}}\label{otros}}
+Si se usa correctamente este principio puede ser realmente muy útil para asegurar una correcta lectura de nuestro diseño.
 
-\hypertarget{fractales-bidimesionales}{%
-\section{Fractales bidimesionales}\label{fractales-bidimesionales}}
+El ritmo de una composición puede ser:
 
-\hypertarget{fractales-cluxe1sicos}{%
-\subsection{Fractales clásicos}\label{fractales-cluxe1sicos}}
+Radial: Si los elementos se disponen de forma circular
+Lineal: Si la disposición de los elementos da una forma de continuidad.
 
-\begin{definition}[Triangulos de Sierpinski]
-\protect\hypertarget{def:sierpinski}{}{\label{def:sierpinski} \iffalse (Triangulos de Sierpinski) \fi{} }wwwwwwwwwwwwwwwwwwwwwwwwwww
-\end{definition}
+\begin{figure}
 
-\begin{definition}[Copo de nieve de Kosh]
-\protect\hypertarget{def:kosh}{}{\label{def:kosh} \iffalse (Copo de nieve de Kosh) \fi{} }wwwwwwwwwwwwwwwwwwwwwwwwwww
-\end{definition}
+{\centering \includegraphics[width=1\linewidth,height=1\textheight]{ritmo} 
 
-\begin{definition}[Arbol fractal]
-\protect\hypertarget{def:arbol}{}{\label{def:arbol} \iffalse (Arbol fractal) \fi{} }wwwwwwwwwwwwwwwwwwwwwwwwwww
-\end{definition}
+}
+
+\caption{Ritmo regular}\label{fig:ritmo}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth,height=1\textheight]{ritmo} 
+
+}
+
+\caption{Ritmo regular}\label{fig:rythm}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth,height=1\textheight]{ritmoo} 
+
+}
+
+\caption{Ritmo progresivo (secuencial)}\label{fig:rythmm}
+\end{figure}
+
+\hypertarget{proporciuxf3n-o-escala}{%
+\section{Proporción o Escala}\label{proporciuxf3n-o-escala}}
+
+El \textbf{principio de proporción} se basa en la relación del tamaño de los objetos con la composición final. La proporción nos ayuda a comunicar la \textbf{relación entre los diferentes elementos de diseño}. También puede ayudarnos a marcar como más importante alguna parte en concreto, ya que los elementos grandes captan más atención que los pequeños.
+
+Dentro del principio de escala podemos tener en cuenta 3 subcategorías:
+
+\begin{itemize}
+\item
+  \textbf{Tamaño}: cuando nos encontramos con elementos de diferentes tamaños relacionados entre sí.
+\item
+  \textbf{Proporción}: elementos relacionados unos con otros, en una proporción visualmente armónica.
+\item
+  \textbf{División}: elementos divididos en diferentes tamaños, creando todos ellos una unidad.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth,height=1\textheight]{proporcion} 
+
+}
+
+\caption{Ritmo regular}\label{fig:proporcion}
+\end{figure}
+
+\hypertarget{unidad}{%
+\section{Unidad}\label{unidad}}
+
+Este principio de la composición tiene lugar cuando un conjunto de \textbf{elementos} se \textbf{organizan y se relaciona entre sí}; de manera que acaban representando un \textbf{solo elemento}.
+
+Dentro del \textbf{principio de unidad}, encontramos 3 variantes (sub-principios):
+
+\begin{itemize}
+\item
+  \textbf{Repetición}: cuando el uso de un mismo elemento se utiliza repetidamente para construir la composición.
+\item
+  \textbf{Principio de Sucesión}: Se logra cuando se usa recurrentemente un color o un elemento donde uno de ellos mantiene el punto focal.
+\item
+  \textbf{Continuidad}: cuando los elementos se articulan entorno a la construcción del mensaje.
+\item
+  \textbf{Proximidad}: cuando se utiliza el mismo elemento para construir bloques en la composición.
+
+  \begin{itemize}
+  \item
+    \textbf{Crear conexiones}: La proximidad puede generar una relación entre dos objetos, generar relevancia, jerarquía, estructurar
+  \item
+    \textbf{Disipar conexiones}: La proximidad también puede reflejar la carencia de relación entre elementos.
+  \end{itemize}
+\end{itemize}
+
+Y no debemos olvidar que también podemos otorgar unidad mediante la armonía con el uso de colores análogos o mediante el contraste con el uso de colores complementarios, como puede verse aquí abajo.
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth,height=1\textheight]{unidad1} 
+
+}
+
+\caption{Unidad continuidad}\label{fig:unidad1}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth,height=1\textheight]{unidad2} 
+
+}
+
+\caption{Unidad continuidad}\label{fig:unidad2}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth,height=1\textheight]{unidad3} 
+
+}
+
+\caption{Unidad continuidad}\label{fig:unidad3}
+\end{figure}
 
 \hypertarget{formas-tridimesionales}{%
 \chapter{Formas tridimesionales}\label{formas-tridimesionales}}
 
+\[\int_1^3\epsilon_i\]
 wwwwwwwwwwwwwwwwwwwwwwwwwwl plano Here is a review of existing methods.
+
+\begin{figure}[!ht]
+
+{\centering \includegraphics{dibujo} 
+
+}
+
+\caption{Elipse}\label{fig:pressure1}
+\end{figure}
 
 \hypertarget{superficies-poliedricas}{%
 \section{Superficies poliedricas}\label{superficies-poliedricas}}
@@ -347,6 +529,9 @@ Esfera Elipsoide
 
 \hypertarget{fractales-3d}{%
 \section{Fractales 3D}\label{fractales-3d}}
+
+\hypertarget{desarrollo-de-forma-tridimensionales}{%
+\section{Desarrollo de forma tridimensionales}\label{desarrollo-de-forma-tridimensionales}}
 
 \hypertarget{composiciuxf3n-de-formas}{%
 \chapter{Composición de formas}\label{composiciuxf3n-de-formas}}
@@ -387,6 +572,21 @@ Esfera Elipsoide
 
 \hypertarget{wwwwwwwwwww}{%
 \subsection{wwwwwwwwwww}\label{wwwwwwwwwww}}
+
+\hypertarget{simetruxedas}{%
+\section{Simetrías}\label{simetruxedas}}
+
+\hypertarget{simetruxeda-axial}{%
+\subsection{Simetría axial}\label{simetruxeda-axial}}
+
+\hypertarget{simetruxeda-radial-o-puntual}{%
+\subsection{Simetría radial o puntual}\label{simetruxeda-radial-o-puntual}}
+
+\hypertarget{simetruxeda-esferica}{%
+\subsection{Simetría esferica}\label{simetruxeda-esferica}}
+
+\hypertarget{simetruxeda-planar}{%
+\subsection{Simetría planar}\label{simetruxeda-planar}}
 
 \hypertarget{formas-organicas}{%
 \chapter{Formas organicas}\label{formas-organicas}}
@@ -494,7 +694,7 @@ Se refiere a las transformaciones o modificaciones que pueden sufrir las formas,
 \hypertarget{trasformaciones-elementales}{%
 \section{Trasformaciones elementales}\label{trasformaciones-elementales}}
 
-En esta seccion se trata sobre la trasformaciones basicas que son la traslación, la rotación, la reflexión y la homotescia o escala
+En esta sección se trata sobre la trasformaciones básicas que son la traslación, la rotación, la reflexión y la homotescia o escala
 
 \hypertarget{traslacion}{%
 \subsection{Traslacion}\label{traslacion}}
@@ -504,7 +704,7 @@ En esta seccion se trata sobre la trasformaciones basicas que son la traslación
 \end{definition}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-2}{}{\label{exm:unnamed-chunk-2} }Sea figura \texttt{\ref{fig:Doge}} la derección de \(37^\circ\), el sentido indicada por la flecha y la distancia 5 unidades.
+\protect\hypertarget{exm:unnamed-chunk-2}{}{\label{exm:unnamed-chunk-2} }Sea figura (\ref{fig:Doge}) la derección de \(37^\circ\), el sentido indicada por la flecha y la distancia 5 unidades.
 \end{example}
 
 www
@@ -522,7 +722,7 @@ www
 \protect\hypertarget{exm:unnamed-chunk-3}{}{\label{exm:unnamed-chunk-3} }www wwwwwwwwwwww wwwwwwwwwwwwwww
 \end{example}
 
-En la escala u homotescia tambien existen procedimientos de proporción \ref{fig:Doge}
+En la escala u homotescia también existen procedimientos de proporción \ref{fig:Doge}
 
 \hypertarget{rotacion}{%
 \subsection{Rotacion}\label{rotacion}}
@@ -559,8 +759,8 @@ La traslacion es el proceso de mover todos los puntos de un objeto en el espacio
 \hypertarget{isomorfismo}{%
 \subsection{Isomorfismo}\label{isomorfismo}}
 
-\hypertarget{wwwwwomorfismo}{%
-\subsection{wwwwwomorfismo}\label{wwwwwomorfismo}}
+\hypertarget{isometruxeda}{%
+\subsection{Isometría}\label{isometruxeda}}
 
 \hypertarget{centro-de-masa}{%
 \chapter{Centro de masa}\label{centro-de-masa}}

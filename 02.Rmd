@@ -1,6 +1,10 @@
 # Formas tridimesionales
-
+$$\int_1^3\epsilon_i$$
 wwwwwwwwwwwwwwwwwwwwwwwwwwl plano Here is a review of existing methods.
+```{r pressure1, echo=FALSE, fig.cap="Elipse", fig.pos ="!ht", fig.align="center"}
+knitr::include_graphics("dibujo.svg")
+```
+
 
 ## Superficies poliedricas
 
@@ -25,3 +29,7 @@ Esfera Elipsoide
 ### No orientables
 
 ## Fractales 3D
+
+## Desarrollo de forma tridimensionales
+
+
