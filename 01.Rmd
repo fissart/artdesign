@@ -1,6 +1,6 @@
 \mainmatter
 
-## Elementos básicos del diseño
+# Elementos básicos del diseño
 
 Comencemos detallando los 6 elementos básicos con los que un diseñador puede crear sus composiciones. ¿Cuáles son los 6 elementos que puede contener un diseño? Todos, sin excepción, disponen de alguno de ellos:
 
@@ -16,7 +16,7 @@ Comencemos detallando los 6 elementos básicos con los que un diseñador puede c
 
 - **Textura**. Un derivado del color. La textura añade ese toque extra de realidad, ya que en la naturaleza no solemos encontrar objetos con colores planos 100%, y la textura nos aporta una información extra de la superficie del objeto.
 
-# Principios de la composición {#intro}
+# Principios de la composición
 
 El **diseño gráfico** es un proceso creativo que consiste en **transmitir un mensaje** a través de una *comunicación visual*. Dentro de este proceso, existe lo que se conoce como *principios de la composición* en diseño gráfico.
 
@@ -42,11 +42,11 @@ Este otro principio de la composición se basa en un elemento que domina sobre e
 
 ```
 
+<div class="sketchfab-embed-wrapper"> <iframe title="Fractal Pagoda • ©Ashim Shakya" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/a639a0cac8d44b9fb8a5ffbec7a4d0a0/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/fractal-pagoda-ashim-shakya-a639a0cac8d44b9fb8a5ffbec7a4d0a0?utm_medium=embed&utm_campaign=share-popup&utm_content=a639a0cac8d44b9fb8a5ffbec7a4d0a0" target="_blank" style="font-weight: bold; color: #1CAAD9;"> Fractal Pagoda • ©Ashim Shakya </a> by <a href="https://sketchfab.com/ashimshakya?utm_medium=embed&utm_campaign=share-popup&utm_content=a639a0cac8d44b9fb8a5ffbec7a4d0a0" target="_blank" style="font-weight: bold; color: #1CAAD9;"> Ashim Shakya </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=a639a0cac8d44b9fb8a5ffbec7a4d0a0" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
+
 ```{r enfasisw, echo=FALSE, out.width='100%', out.height='100%', fig.align="center", fig.cap="Unidad continuidad"}
 knitr::include_graphics('enfasis.png')
 ```
-
-![img](enfasis.png)
 
 ## Equilibrio o balance
 

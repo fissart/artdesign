@@ -19,7 +19,7 @@ fig:Doge
 exm:unnamed-chunk-3
 def:rotacion
 elementos-básicos-del-diseño
-intro
+principios-de-la-composición
 énfasis-o-punto-focal
 equilibrio-o-balance
 ritmo-o-movimiento
