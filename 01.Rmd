@@ -163,8 +163,8 @@ knitr::include_graphics('unidad2.jpg')
 ```{r unidad3, echo=FALSE, out.width='100%', out.height='100%', fig.align="center", fig.cap="Unidad continuidad"}
 knitr::include_graphics('unidad3.jpg')
 ```
-<!--
 ![img](unidad.png)
 ![img](unidadcolor.png)
+<!--
 -->
 
