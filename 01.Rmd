@@ -119,7 +119,9 @@ knitr::include_graphics('ritmoo.jpg')
 <!-- ![img](ritmoo.jpg) -->
 
 ## Proporción o Escala
-El **principio de proporción** se basa en la relación del tamaño de los objetos con la composición final. La proporción nos ayuda a comunicar la **relación entre los diferentes elementos de diseño**. También puede ayudarnos a marcar como más importante alguna parte en concreto,  ya que los elementos grandes captan más atención que los pequeños.
+El **principio de proporción** se basa en la relación del **tamaño** de los objetos con la composición final. La proporción nos ayuda a comunicar la **relación entre los diferentes elementos de diseño**. También puede ayudarnos a **marcar como más importante alguna parte en concreto**,  ya que los elementos grandes captan más atención que los pequeños.
+
+La rporcion o escala es una de las trasformciones elementales (Traslación rotación, escala y reflexión)
 
 Dentro del principio de escala podemos tener en cuenta 3 subcategorías:
 
@@ -128,6 +130,8 @@ Dentro del principio de escala podemos tener en cuenta 3 subcategorías:
 * **Proporción**: elementos relacionados unos con otros, en una proporción visualmente armónica.
 
 * **División**: elementos divididos en diferentes tamaños, creando todos ellos una unidad.
+
+<div class="sketchfab-embed-wrapper"> <iframe title="Julia3D 5 Torus" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="100%" height="500" src="https://sketchfab.com/models/75c8703899fd47ab93cc78571d4b5f41/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/julia3d-5-torus-75c8703899fd47ab93cc78571d4b5f41?utm_medium=embed&utm_campaign=share-popup&utm_content=75c8703899fd47ab93cc78571d4b5f41" target="_blank" style="font-weight: bold; color: #1CAAD9;"> Julia3D 5 Torus </a> by <a href="https://sketchfab.com/Aiekick?utm_medium=embed&utm_campaign=share-popup&utm_content=75c8703899fd47ab93cc78571d4b5f41" target="_blank" style="font-weight: bold; color: #1CAAD9;"> Aiekick </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=75c8703899fd47ab93cc78571d4b5f41" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
 
 ```{r proporcion, echo=FALSE, out.width='100%', out.height='100%', fig.align="center", fig.cap="Ritmo regular"}
 knitr::include_graphics('proporcion.png')
@@ -148,6 +152,9 @@ Dentro del **principio de unidad**, encontramos 3 variantes (sub-principios):
   * **Crear conexiones**: La proximidad puede generar una relación entre dos objetos, generar relevancia, jerarquía, estructurar
   
   * **Disipar conexiones**: La proximidad también puede reflejar la carencia de relación entre elementos.
+
+
+<div class="sketchfab-embed-wrapper"> <iframe title="Julia Revolute High Res" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="100%" height="500" src="https://sketchfab.com/models/963527bd08f5427997809eec85e0cac2/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/julia-revolute-high-res-963527bd08f5427997809eec85e0cac2?utm_medium=embed&utm_campaign=share-popup&utm_content=963527bd08f5427997809eec85e0cac2" target="_blank" style="font-weight: bold; color: #1CAAD9;"> Julia Revolute High Res </a> by <a href="https://sketchfab.com/Aiekick?utm_medium=embed&utm_campaign=share-popup&utm_content=963527bd08f5427997809eec85e0cac2" target="_blank" style="font-weight: bold; color: #1CAAD9;"> Aiekick </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=963527bd08f5427997809eec85e0cac2" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
 
 Y no debemos olvidar que también podemos otorgar unidad mediante la armonía con el uso de colores análogos o mediante el contraste con el uso de colores complementarios, como puede verse aquí abajo.
 
