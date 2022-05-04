@@ -1,46 +1,53 @@
-\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 \PassOptionsToPackage{dvipsnames,svgnames*,x11names*}{xcolor}
 %
-\documentclass[16pt,]{krantz}
+\documentclass[
+  16pt,
+]{krantz}
+\usepackage{amsmath,amssymb}
 \usepackage{lmodern}
-\usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
-\usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
-  \usepackage{textcomp} % provides euro and other symbols
-\else % if luatex or xelatex
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
   \usepackage{unicode-math}
-  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
-    \setmonofont[Mapping=tex-ansi,Scale=0.7]{Source Code Pro}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+  \setmonofont[Scale=0.7]{Source Code Pro}
 \fi
-% use upquote if available, for straight quotes in verbatim environments
+% Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-% use microtype if available
-\IfFileExists{microtype.sty}{%
-\usepackage[]{microtype}
-\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
-\IfFileExists{parskip.sty}{%
-\usepackage{parskip}
-}{% else
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
-}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
 \usepackage{xcolor}
-\usepackage{hyperref}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-            pdftitle={Diseño artístico},
-            pdfauthor={Ricardo Michel MALLQUI BAÑOS},
-            colorlinks=true,
-            linkcolor=Maroon,
-            filecolor=Maroon,
-            citecolor=Blue,
-            urlcolor=Blue,
-            breaklinks=true}
-\urlstyle{same}  % don't use monospace font for urls
+  pdftitle={Diseño artístico},
+  pdfauthor={Ricardo Michel MALLQUI BAÑOS},
+  colorlinks=true,
+  linkcolor=Maroon,
+  filecolor=Maroon,
+  citecolor=Blue,
+  urlcolor=Blue,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
 \usepackage{color}
 \usepackage{fancyvrb}
 \newcommand{\VerbBar}{|}
@@ -81,19 +88,20 @@
 \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
 \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\usepackage{longtable,booktabs}
-% Fix footnotes in tables (requires footnote package)
-\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{longtable}}{}
-\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
-
-% set default figure placement to htbp
-\makeatletter
-\def\fps@figure{htbp}
-\makeatother
-
 \usepackage[spanish,es-lcroman]{babel}
 \usepackage{booktabs}
 \usepackage{graphicx}
@@ -140,14 +148,16 @@
 \flushbottom 
 
 \frontmatter
+
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
 \title{Diseño artístico}
 \author{Ricardo Michel MALLQUI BAÑOS}
-\providecommand{\institute}[1]{}
-\institute{Universidad Nacional San Cristóbal De Huamanga}
-\date{2021-10-18}
+\date{2022-05-03}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Teorema}[chapter]
@@ -269,7 +279,24 @@ Se consideran los siguientes principios:
 \hypertarget{uxe9nfasis-o-punto-focal}{%
 \section{Énfasis o punto focal}\label{uxe9nfasis-o-punto-focal}}
 
-www
+\begin{definition}[Énfasis o punto focal]
+\protect\hypertarget{def:www}{}\label{def:www}
+
+Este otro principio de la composición se basa en un elemento que domina sobre el resto en condición de subordinación. Dentro de la jerarquía, encontramos 3 subtipos:
+
+\begin{itemize}
+\tightlist
+\item
+  Alineación
+\item
+  Escala
+\item
+  Color
+\item
+  Forma
+\end{itemize}
+
+\end{definition}
 
 Cthulhu (Animated) by Nathan Wondrak on Sketchfab
 
@@ -289,18 +316,44 @@ Dragon Curve 2 by tatasz on Sketchfab
 \hypertarget{equilibrio-o-balance}{%
 \section{Equilibrio o balance}\label{equilibrio-o-balance}}
 
-:::\{.definition \#r name=``Equilibrio''\} El equilibrio se basa en la organización de los elementos de modo que \textbf{nada domine en el plano o bien para que una parte pese más que la otra}.
+\begin{definition}[Énfasis o punto focal]
+\protect\hypertarget{def:www}{}\label{def:www}
 
-Existen dos tipos de equilibrio: la simetría y la asimetría. :::
+Este otro principio de la composición se basa en un elemento que domina sobre el resto en condición de subordinación. Dentro de la jerarquía, encontramos 3 subtipos:
 
 \begin{itemize}
+\tightlist
+\item
+  Alineación
+\item
+  Escala
+\item
+  Color
+\item
+  Forma
+\end{itemize}
+
+\end{definition}
+
+\begin{definition}[Equilibrio]
+\protect\hypertarget{def:wwwwwwwwwww}{}\label{def:wwwwwwwwwww}
+
+El equilibrio se basa en la organización de los elementos de modo que \textbf{nada domine en el plano o bien para que una parte pese más que la otra}.
+Existen dos tipos de equilibrio: la simetría y la asimetría.
+
+\begin{itemize}
+\tightlist
 \item
   \textbf{Balance Simétrico}: se da cuando los elementos se disponen simétricamente a ambos lados de los ejes, horizontal o vertical.
 \item
   \textbf{Balance Asimétrico}: se da cuando los elementos no mantienen simetría por forma, pero sí por peso visual.
 \end{itemize}
 
+\end{definition}
+
 The Tripled by Peter Petrov on Sketchfab
+
+:::
 
 Fractal Tree3D Test by Lars Magnus Nyland on Sketchfab
 
@@ -336,7 +389,7 @@ El ritmo de una composición puede ser:
 
 Radial: Si los elementos se disponen de forma circular Lineal: Si la disposición de los elementos da una forma de continuidad.
 
-\textless{}iframe title=``Fractal Thing'' frameborder=``0'' allowfullscreen mozallowfullscreen=``true'' webkitallowfullscreen=``true'' allow=``fullscreen; autoplay; vr'' xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width:``100\%'' height=``500'' src=``\url{https://sketchfab.com/models/72576d675a3141bbbc4017e9b846bc86/embed}''\textgreater{}
+\textless iframe title=``Fractal Thing'' frameborder=``0'' allowfullscreen mozallowfullscreen=``true'' webkitallowfullscreen=``true'' allow=``fullscreen; autoplay; vr'' xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width:``100\%'' height=``500'' src=``\url{https://sketchfab.com/models/72576d675a3141bbbc4017e9b846bc86/embed}''\textgreater{}
 
 Fractal Thing by Marc Vanlindt on Sketchfab
 
@@ -583,7 +636,7 @@ Esfera Elipsoide
 \subsection{Union}\label{union}}
 
 \begin{definition}
-\protect\hypertarget{def:unnamed-chunk-1}{}{\label{def:unnamed-chunk-1} }wwwwwwwwwwwwwwwwwwwwwww
+\protect\hypertarget{def:unnamed-chunk-1}{}\label{def:unnamed-chunk-1}wwwwwwwwwwwwwwwwwwwwwww
 \end{definition}
 
 \hypertarget{interseccion}{%
@@ -664,9 +717,9 @@ wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(}
-  \KeywordTok{head}\NormalTok{(iris, }\DecValTok{20}\NormalTok{), }\DataTypeTok{caption =} \StringTok{'Here is a nice table!'}\NormalTok{,}
-  \DataTypeTok{booktabs =} \OtherTok{TRUE}
+\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(}
+  \FunctionTok{head}\NormalTok{(iris, }\DecValTok{20}\NormalTok{), }\AttributeTok{caption =} \StringTok{\textquotesingle{}Here is a nice table!\textquotesingle{}}\NormalTok{,}
+  \AttributeTok{booktabs =} \ConstantTok{TRUE}
 \NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
@@ -728,7 +781,7 @@ Temas de reforzamiento o conocimientos preliminares que son necesarias para ente
 Se refiere a las transformaciones o modificaciones que pueden sufrir las formas, es decir los achatamientos, las elongaciones los cambios de posición etc., mediante la manipulación de los puntos pertenecientes a la forma.
 
 \begin{definition}[Transformación]
-\protect\hypertarget{def:transformacion}{}{\label{def:transformacion} \iffalse (Transformación) \fi{} }Una transformacion es el proceso de modificar una forma covirtiendola en otra
+\protect\hypertarget{def:transformacion}{}\label{def:transformacion}Una transformacion es el proceso de modificar una forma covirtiendola en otra
 \end{definition}
 
 \hypertarget{trasformaciones-elementales}{%
@@ -740,11 +793,11 @@ En esta sección se trata sobre la trasformaciones básicas que son la traslaci�
 \subsection{Traslacion}\label{traslacion}}
 
 \begin{definition}[Traslación]
-\protect\hypertarget{def:traslacion}{}{\label{def:traslacion} \iffalse (Traslación) \fi{} }La traslacion de un objeto, consiste en mover todos los puntos del objeto en el espacio 2D o 3D en una solo dirección, un solo sentido y a una distancia determinada.
+\protect\hypertarget{def:traslacion}{}\label{def:traslacion}La traslacion de un objeto, consiste en mover todos los puntos del objeto en el espacio 2D o 3D en una solo dirección, un solo sentido y a una distancia determinada.
 \end{definition}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-2}{}{\label{exm:unnamed-chunk-2} }Sea figura (\ref{fig:Doge}) la derección de \(37^\circ\), el sentido indicada por la flecha y la distancia 5 unidades.
+\protect\hypertarget{exm:unnamed-chunk-2}{}\label{exm:unnamed-chunk-2}Sea figura (\ref{fig:Doge}) la derección de \(37^\circ\), el sentido indicada por la flecha y la distancia 5 unidades.
 \end{example}
 
 www
@@ -759,7 +812,7 @@ www
 \end{figure}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-3}{}{\label{exm:unnamed-chunk-3} }www wwwwwwwwwwww wwwwwwwwwwwwwww
+\protect\hypertarget{exm:unnamed-chunk-3}{}\label{exm:unnamed-chunk-3}www wwwwwwwwwwww wwwwwwwwwwwwwww
 \end{example}
 
 En la escala u homotescia también existen procedimientos de proporción \ref{fig:Doge}
@@ -768,7 +821,7 @@ En la escala u homotescia también existen procedimientos de proporción \ref{fi
 \subsection{Rotacion}\label{rotacion}}
 
 \begin{definition}[Traslación]
-\protect\hypertarget{def:rotacion}{}{\label{def:rotacion} \iffalse (Traslación) \fi{} }La traslacion es el proceso de mover todos los puntos de un objeto en el espacio 2D o 3D en una solo dirección y sentido a una distancia determinada
+\protect\hypertarget{def:rotacion}{}\label{def:rotacion}La traslacion es el proceso de mover todos los puntos de un objeto en el espacio 2D o 3D en una solo dirección y sentido a una distancia determinada
 \end{definition}
 
 \hypertarget{reflexiuxf3n}{%
@@ -835,7 +888,7 @@ La traslacion es el proceso de mover todos los puntos de un objeto en el espacio
 \hypertarget{muxe9todo-de-la-plomada-1}{%
 \subsubsection{Método de la plomada}\label{muxe9todo-de-la-plomada-1}}
 
-\bibliography{book.bib,packages.bib}
+  \bibliography{book.bib,packages.bib}
 
 \printindex
 
