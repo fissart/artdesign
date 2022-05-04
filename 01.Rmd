@@ -26,8 +26,9 @@ Se consideran los siguientes principios:
 
 ## Énfasis o punto focal
 
+www
 
-::: {#www .definition name="Énfasis o punto focal"}
+::: {#wwwwwwwwwwwww .definition name="name"}
 Este otro principio de la composición se basa en un elemento que domina sobre el resto en condición de subordinación. Dentro de la jerarquía, encontramos 3 subtipos:
 
 -   Alineación
@@ -36,6 +37,22 @@ Este otro principio de la composición se basa en un elemento que domina sobre e
 -   Forma
 :::
 
+::: {.definition}
+Este otro principio de la composición se basa en un elemento que domina sobre el resto en condición de subordinación. Dentro de la jerarquía, encontramos 3 subtipos:
+
+
+1. ww
+2. wwwwwwwwwwwww
+
+-   Alineación
+-   Escala
+-   Color
+-   Forma 
+$$
+    \int_1^3
+    $$
+-   wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+:::
 
 <iframe title="Cthulhu (Animated)" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="100%" height="480" src="https://sketchfab.com/models/e4593e6681e84889a4d1df34ae30b5c6/embed">
 
@@ -64,16 +81,15 @@ knitr::include_graphics('enfasis.png')
 
 ## Equilibrio o balance
 
+:::{.definition \#r name="Equilibrio"} El equilibrio se basa en la organización de los elementos de modo que **nada domine en el plano o bien para que una parte pese más que la otra**.
 
-::: {#wwwwwwwwwww .definition name="Equilibrio"} 
-El equilibrio se basa en la organización de los elementos de modo que **nada domine en el plano o bien para que una parte pese más que la otra**.
-Existen dos tipos de equilibrio: la simetría y la asimetría.
+Existen dos tipos de equilibrio: la simetría y la asimetría. :::
 
 -   **Balance Simétrico**: se da cuando los elementos se disponen simétricamente a ambos lados de los ejes, horizontal o vertical.
+
 -   **Balance Asimétrico**: se da cuando los elementos no mantienen simetría por forma, pero sí por peso visual.
-:::
 
-
+::: {.sketchfab-embed-wrapper}
 <iframe title="The Tripled" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="100%" height="480" src="https://sketchfab.com/models/38529b783aa54b58b09f911b02c98f77/embed">
 
 </iframe>
@@ -223,11 +239,11 @@ knitr::include_graphics('unidad1.jpg')
 
 ```
 
-```{r unidad2, echo=FALSE, out.width='50%', out.height='100%', fig.align="center", fig.cap="Unidad continuidad"}
+```{r unidad2, echo=FALSE, out.width='100%', out.height='100%', fig.align="center", fig.cap="Unidad continuidad"}
 knitr::include_graphics('unidad2.jpg')
 ```
 
-```{r unidad3, echo=FALSE, out.width='50%', out.height='100%', fig.align="center", fig.cap="Unidad continuidad"}
+```{r unidad3, echo=FALSE, out.width='100%', out.height='100%', fig.align="center", fig.cap="Unidad continuidad"}
 knitr::include_graphics('unidad3.jpg')
 
 ```
