@@ -10,7 +10,7 @@ bookdown::gitbook:
     toc:
       collapse: section
       scroll_highlight: yes
-    download: ["pdf", "epub", "word"]
+    download: ["pdf", "epub", "docx"]
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
