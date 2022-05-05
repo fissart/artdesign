@@ -4,7 +4,7 @@
 :::{.definition}
 La forma es uno de los principales elementos de creación plástica. Gracias a ellas podemos representar imágenes tanto figurativas como abstracta. Por este motivo es importante entender como podemos trabajar las formas y como pueden convivir en nuestras creaciones.
 :::
-
+  
 
 ## Relaciones entre formas planas.
 Las relaciones entre formas pueden ser las siguientes:
@@ -20,6 +20,7 @@ Existe relación de toque cuando las formas están en contacto.
 
 Relación de formas por toque
 Jugando con la sensación de equilibrio, estas formas circulares y semicirculares se mantienen unidas por un ligero contacto.
+
 ### Superposición.
 Existe superposición cuando una forma tapa a otra y de esta solo vemos la parte que no está tapada.
 
